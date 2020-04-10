@@ -50,7 +50,7 @@
     font-size: 14px;
     line-height: 30px;
     color: #fff;
-    @include f500; 
+    @include f500;
   }
 }
 
@@ -71,13 +71,13 @@
   text-align: center;
   &-title {
     font-size: 48px;
-    @include f700; 
+    @include f700;
     margin-bottom: 28px;
     line-height: 72px;
   }
   &-text {
     font-size: 20px;
-    @include f500; 
+    @include f500;
     margin-bottom: 50px;
     line-height: 30px;
   }
@@ -93,7 +93,7 @@
       width: 100%;
       border: none;
       font-size: 14px;
-      @include f500; 
+      @include f500;
       padding-left: 25px;
       padding-right: 60px;
 
@@ -102,7 +102,7 @@
       }
       &::placeholder {
         color: #90a4ae;
-        @include f500; 
+        @include f500;
         outline: none;
       }
     }
@@ -164,7 +164,7 @@
     padding: 10px 30px;
     min-height: 90px;
     align-items: center;
-    @include f500; 
+    @include f500;
     border-bottom: 1px solid #e7ecf2;
   }
   &-name {
@@ -184,7 +184,7 @@
   &-price {
     color: $darkblue;
     font-size: 20px;
-    @include f700; 
+    @include f700;
   }
   &-info {
     min-height: 70px;
@@ -210,7 +210,7 @@
     }
     span {
       font-size: 14px;
-      @include f500; 
+      @include f500;
     }
   }
   &-star {
@@ -273,28 +273,28 @@
 
 // start advantages
 
-.advantages{
+.advantages {
   background-color: $darkblue;
   padding: 110px 0;
-  &__inner{
+  &__inner {
     display: flex;
     justify-content: space-between;
   }
 }
-.advantages__item{
+.advantages__item {
   text-align: center;
   max-width: 370px;
   padding: 0 15px;
-  
-  &:hover{
-    .advantages__item-images{
+
+  &:hover {
+    .advantages__item-images {
       background-color: $green;
     }
-    .advantages__item-title{
+    .advantages__item-title {
       color: $green;
     }
   }
-  &-images{
+  &-images {
     width: 114px;
     height: 114px;
     background-color: #fff;
@@ -303,43 +303,42 @@
     justify-content: center;
     align-items: center;
     margin: 0 auto 30px;
-    transition: all .5s;
+    transition: all 0.5s;
   }
-  &-title{
+  &-title {
     margin-bottom: 25px;
     color: #fff;
     font-size: 24px;
     @include f500;
-    transition: all .5s;
+    transition: all 0.5s;
   }
-  
 }
-.advantages__title{
+.advantages__title {
   color: #fff;
 }
-.icosvg-1{
-  svg{
-    transition: all .2s;
+.icosvg-1 {
+  svg {
+    transition: all 0.2s;
     width: 50px;
-    &:hover{
+    &:hover {
       fill: #fff;
     }
   }
 }
-.icosvg-2{
-  svg{
-    transition: all .2s;
+.icosvg-2 {
+  svg {
+    transition: all 0.2s;
     width: 70px;
-    &:hover{
+    &:hover {
       fill: #fff;
     }
   }
 }
-.icosvg-3{
-  svg{
-    transition: all .2s;
+.icosvg-3 {
+  svg {
+    transition: all 0.2s;
     width: 86px;
-    &:hover{
+    &:hover {
       fill: #fff;
     }
   }
@@ -347,42 +346,73 @@
 // end advantages
 
 // start author
-  .author{
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    min-height: 750px;
+.author {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 750px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__box {
+    background-color: $green;
     display: flex;
     justify-content: center;
     align-items: center;
-    &__box{
-      background-color: $green;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 650px;
-      min-height: 215px;
-    }
-    &__title{
-      color: #fff;
-      font-size: 30px;
-      max-width: 265px;
-      line-height: 36px;
-      span{
-        @include f700;
-      }
-    }
-    &__link{
-      background-color: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 64px;
-      padding:14px   40px;
-      margin-left: 48px;
-      font-size: 18px;
-      line-height: 36px;
-      color: $darkblue;
+    width: 650px;
+    min-height: 215px;
+  }
+  &__title {
+    color: #fff;
+    font-size: 30px;
+    max-width: 265px;
+    line-height: 36px;
+    span {
+      @include f700;
     }
   }
+  &__link {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 64px;
+    padding: 14px 40px;
+    margin-left: 48px;
+    font-size: 18px;
+    line-height: 36px;
+    color: $darkblue;
+  }
+}
 // end author
+
+// start tutorial
+.tutorial {
+  padding: 70px 0 120px;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    max-width: 370px;
+    width: 100%;
+  }
+}
+.tutorial__item {
+  &-images {
+  min-height: 270px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  
+  }
+  &-title {
+    background-color: #f8f8f8;
+    font-size: 24px;
+    text-align: center;
+    @include f700;
+    color: $darkblue;
+    padding: 30px 10px;
+  }
+}
+// end tutorial
