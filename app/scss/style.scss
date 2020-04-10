@@ -50,8 +50,7 @@
     font-size: 14px;
     line-height: 30px;
     color: #fff;
-    font-weight: 500;
-    font-family: "Roboto", sans-serif;
+    @include f500; 
   }
 }
 
@@ -72,13 +71,13 @@
   text-align: center;
   &-title {
     font-size: 48px;
-    font-weight: 700;
+    @include f700; 
     margin-bottom: 28px;
     line-height: 72px;
   }
   &-text {
     font-size: 20px;
-    font-weight: 500;
+    @include f500; 
     margin-bottom: 50px;
     line-height: 30px;
   }
@@ -94,7 +93,7 @@
       width: 100%;
       border: none;
       font-size: 14px;
-      font-weight: 500;
+      @include f500; 
       padding-left: 25px;
       padding-right: 60px;
 
@@ -103,7 +102,7 @@
       }
       &::placeholder {
         color: #90a4ae;
-        font-weight: 500;
+        @include f500; 
         outline: none;
       }
     }
@@ -165,7 +164,7 @@
     padding: 10px 30px;
     min-height: 90px;
     align-items: center;
-    font-weight: 500;
+    @include f500; 
     border-bottom: 1px solid #e7ecf2;
   }
   &-name {
@@ -185,7 +184,7 @@
   &-price {
     color: $darkblue;
     font-size: 20px;
-    font-weight: 700;
+    @include f700; 
   }
   &-info {
     min-height: 70px;
@@ -211,7 +210,7 @@
     }
     span {
       font-size: 14px;
-      font-weight: 500;
+      @include f500; 
     }
   }
   &-star {
@@ -271,3 +270,78 @@
   }
 }
 //end product-slider
+
+// start advantages
+
+.advantages{
+  background-color: $darkblue;
+  padding: 110px 0;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.advantages__item{
+  text-align: center;
+  max-width: 370px;
+  padding: 0 15px;
+  
+  &:hover{
+    .advantages__item-images{
+      background-color: $green;
+    }
+    .advantages__item-title{
+      color: $green;
+    }
+  }
+  &-images{
+    width: 114px;
+    height: 114px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 30px;
+    transition: all .5s;
+  }
+  &-title{
+    margin-bottom: 25px;
+    color: #fff;
+    font-size: 24px;
+    @include f500;
+    transition: all .5s;
+  }
+  
+}
+.advantages__title{
+  color: #fff;
+}
+.icosvg-1{
+  svg{
+    transition: all .2s;
+    width: 50px;
+    &:hover{
+      fill: #fff;
+    }
+  }
+}
+.icosvg-2{
+  svg{
+    transition: all .2s;
+    width: 70px;
+    &:hover{
+      fill: #fff;
+    }
+  }
+}
+.icosvg-3{
+  svg{
+    transition: all .2s;
+    width: 86px;
+    &:hover{
+      fill: #fff;
+    }
+  }
+}
+// end advantages
