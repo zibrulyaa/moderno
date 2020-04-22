@@ -53,7 +53,259 @@
     @include f500;
   }
 }
+.header__circle {
+  &.active {
+    display: block;
+  }
+  display: none;
 
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #a0a0a0;
+    font-size: 14px;
+  }
+  span {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 18px;
+    right: -7px;
+    top: -7px;
+    font-size: 11px;
+    color: #fff;
+  }
+}
+.notification {
+  span {
+    background-color: $yellow;
+  }
+}
+.message {
+  span {
+    background-color: $orange;
+  }
+}
+.basket {
+  span {
+    background-color: $green;
+  }
+}
+.header__box {
+  display: flex;
+  align-items: center;
+}
+.header__btn-login--off {
+  display: none;
+}
+.header__btn-register--off {
+  display: none;
+}
+.header__btn-logout {
+  background-color: $red;
+  display: none;
+  &.header__btn-logout--on {
+    display: block;
+  }
+}
+.user__box,
+.basket__box,
+.message__box,
+.notification__box {
+  position: relative;
+  height: 90px;
+  margin-top: 40px;
+  &:hover {
+    .header__circle::before {
+      color: $darkblue;
+    }
+    .user__menu {
+      height: auto;
+      padding: 20px;
+      border-width: 1px;
+      overflow: auto;
+    }
+  }
+}
+.user {
+  margin-left: 20px;
+  margin-right: 25px;
+  padding-right: 20px;
+  position: relative;
+  &::before {
+    top: 0;
+    right: 0;
+    font-size: 16px;
+    color: #707070;
+    position: absolute;
+    font-family: "icomoon" !important;
+    content: "\f107";
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+  &__images {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    margin-right: 15px;
+    overflow: hidden;
+  }
+  &__info {
+    line-height: 24px;
+    font-size: 14px;
+  }
+  &__name {
+    @include f500;
+    color: #222;
+  }
+  &__money {
+    color: $green;
+    @include f700;
+  }
+}
+.user__menu {
+  transition: all 0.5s;
+  height: 0;
+  border: 0px solid #d5d5d5;
+  background-color: #fff;
+  position: absolute;
+  padding: 0 20px;
+  width: 158px;
+  top: 69px;
+  left: 20px;
+  overflow: hidden;
+  a {
+    font-size: 12px;
+    color: #546e7a;
+    margin-bottom: 15px;
+  }
+}
+.circle__menu {
+  border-top: 0px solid #e0e0e0;
+  top: 62px;
+  right: 0;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  transition: all 0.5s;
+}
+.basket__box,
+.message__box,
+.notification__box {
+  margin-top: 54px;
+  margin-left: 15px;
+  &:hover {
+    .circle__menu {
+      height: auto;
+      border-top: 1px solid #e0e0e0;
+      overflow: hidden;
+      .circle__item {
+        padding: 23px 23px;
+      }
+    }
+  }
+}
+
+.circle__item {
+  transition: all 0.3s;
+  background-color: #fff;
+  padding: 0px 23px;
+  border: 1px solid #e0e0e0;
+  width: 270px;
+  border-top: none;
+  display: flex;
+  align-items: center;
+  position: relative;
+  &::before {
+    position: absolute;
+    right: 27px;
+    top: 27px;
+    font-size: 16px;
+    color: #b0bec5;
+  }
+  .circle__images {
+    margin-right: 15px;
+  }
+}
+.circle__info {
+  &-name {
+    color: $darkblue;
+    @include f500;
+  }
+  &-thema {
+    font-size: 12px;
+    color: $green;
+  }
+  &-price {
+    @include f500;
+    color: #000;
+    font-size: 16px;
+  }
+  &-date {
+    font-size: 10px;
+    color: #707070;
+  }
+}
+.circle__summ {
+  background-color: #fff;
+  padding: 16px 17px 12px;
+  border: 1px solid #e0e0e0;
+  border-top: none;
+  .circle__title {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 12px;
+    padding-right: 22px;
+    @include f700;
+    margin-bottom: 15px;
+    color: $darkblue;
+    font-size: 16px;
+  }
+}
+.circle__btn {
+  color: #fff;
+  @include f700;
+  font-size: 14px;
+  background-color: $green;
+  padding: 12px 5px;
+  text-align: center;
+  width: 100px;
+  &-checkout {
+    background-color: $red;
+    width: 120px;
+    margin-left: 6px;
+  }
+}
+.notification__menu,
+.message__menu {
+  .circle__images {
+    margin-right: 20px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+  }
+  .circle__info {
+    line-height: 18px;
+    &-name {
+      font-size: 12px;
+    }
+  }
+}
+.icons__color::before {
+  color: $orange;
+}
 // end header
 
 // start search
