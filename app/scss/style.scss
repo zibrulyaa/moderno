@@ -138,7 +138,6 @@
   }
 }
 .user {
-  margin-left: 20px;
   margin-right: 25px;
   padding-right: 20px;
   position: relative;
@@ -200,6 +199,10 @@
   overflow: hidden;
   position: absolute;
   transition: all 0.5s;
+  z-index: 1;
+}
+.basket__box {
+  margin-right: 20px;
 }
 .basket__box,
 .message__box,
@@ -305,6 +308,9 @@
 }
 .icons__color::before {
   color: $orange;
+}
+.header__btn-menu {
+  display: none;
 }
 // end header
 
@@ -1203,3 +1209,5 @@ button.icon-unsorted {
   padding: 15px 20px;
 }
 // end product-page
+
+@import "media";
