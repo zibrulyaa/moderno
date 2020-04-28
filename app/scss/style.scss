@@ -1834,3 +1834,80 @@ button.icon-unsorted {
   padding: 13px 5px;
 }
 // end contact
+.settings {
+  padding-bottom: 100px;
+  .product-one__tabs.settings__tabs {
+    display: flex;
+    .tabs {
+      height: 100%;
+      display: block;
+      max-width: 270px;
+      width: 100%;
+      margin-right: 30px;
+      border: 1px solid #dedede;
+      border-bottom: none;
+      text-align: left;
+      span {
+        display: block;
+        background-color: #fff;
+        padding: 17px 17px 17px 50px;
+        border-bottom: 1px solid #dedede;
+        @include f500;
+        font-size: 14px;
+        &::before {
+          left: 24px;
+          color: #444;
+          font-size: 14px;
+        }
+        &.active {
+          border-bottom: 3px solid $green;
+          &::before {
+            color: $green;
+          }
+        }
+      }
+    }
+    .tabs .tab + .tab {
+      border-left: none;
+    }
+    .tab_content {
+      width: 100%;
+      padding: 0;
+      border: none;
+      background-color: transparent;
+    }
+  }
+}
+.page-box {
+  border: 1px solid #dedede;
+  background-color: #fff;
+  &__title {
+    border-bottom: 1px solid #dedede;
+    padding: 18px 34px;
+    @include f500;
+    font-size: 24px;
+    color: $darkblue;
+  }
+  &__content {
+    padding: 30px 35px 80px;
+  }
+}
+.setting__line {
+  margin-bottom: 21px;
+  display: flex;
+  align-items: center;
+  label {
+    color: #444;
+    width: 260px;
+  }
+  input,
+  select {
+    max-width: 540px;
+    width: 100%;
+    background-color: #f9f9f9;
+    height: 40px;
+    color: #000;
+    border: 1px solid #dedede;
+    padding: 0 10px;
+  }
+}
