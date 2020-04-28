@@ -1690,3 +1690,147 @@ button.icon-unsorted {
     margin-bottom: 100px;
   }
 }
+//end 404
+
+// start about
+
+.about,
+.contact {
+  margin-bottom: 150px;
+  &__wrapper {
+    border: 1px solid #dcdcdc;
+    background-color: #fff;
+    padding: 20px 30px;
+    @include f500;
+    font-size: 24px;
+    color: $darkblue;
+  }
+  &__inner {
+    border: 1px solid #dcdcdc;
+    background-color: #fff;
+    border-top: none;
+    padding: 0 55px;
+    padding-top: 40px;
+  }
+  .about__item-title {
+    margin-bottom: 20px;
+    @include f700;
+    color: #444;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .about__item-text {
+    margin: 0;
+    padding-bottom: 50px;
+  }
+}
+// end about
+
+// start contact
+
+.contact__inner {
+  padding: 30px 40px 0;
+}
+.contact__map {
+  margin: 0 0 60px;
+  iframe {
+    width: 100%;
+    height: 420px;
+  }
+}
+.contact__box {
+  display: flex;
+  padding-bottom: 15px;
+}
+.contact__info {
+  max-width: 330px;
+  width: 100%;
+  margin-right: 30px;
+}
+.contact__info-item {
+  margin-bottom: 30px;
+}
+.contact__info-title {
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  font-family: "Roboto", sans-serif !important;
+  font-weight: 500;
+  position: relative;
+  padding-left: 40px;
+  &::before {
+    position: absolute;
+    font-family: "icomoon";
+    color: $green;
+    left: 0;
+  }
+  &::after {
+    content: "";
+    width: 44px;
+    height: 4px;
+    background-color: $green;
+    position: absolute;
+    bottom: 10px;
+    left: 40px;
+  }
+}
+.contact__info-content {
+  padding-left: 40px;
+  font-size: 15px;
+  color: #707070;
+  max-width: 275px;
+}
+.contact__form {
+  max-width: 730px;
+  width: 100%;
+  &-title {
+    @include f500;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 25px;
+  }
+  &-row {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    input {
+      background-color: #f1f4f5;
+      border: none;
+      width: 350px;
+      padding: 15px 0;
+      padding-left: 20px;
+      &::placeholder {
+        font-size: 15px;
+        color: #7a7a7a;
+      }
+    }
+  }
+  textarea {
+    background-color: #f1f4f5;
+    border: none;
+    width: 100%;
+    height: 190px;
+    padding: 18px;
+    margin-bottom: 20px;
+    display: block;
+    resize: none;
+    &::placeholder {
+      font-size: 15px;
+      color: #7a7a7a;
+    }
+  }
+}
+.contact__btn {
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700 !important;
+  font-weight: 16;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: $green;
+  line-height: 24px;
+  width: 190px;
+  padding: 13px 5px;
+}
+// end contact
