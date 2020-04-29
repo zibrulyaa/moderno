@@ -1834,6 +1834,8 @@ button.icon-unsorted {
   padding: 13px 5px;
 }
 // end contact
+
+// start settings
 .settings {
   padding-bottom: 100px;
   .product-one__tabs.settings__tabs {
@@ -1911,3 +1913,322 @@ button.icon-unsorted {
     padding: 0 10px;
   }
 }
+//end settings
+
+// start profile
+.profile__inner {
+  display: flex;
+  margin-bottom: 30px;
+}
+.profile__aside {
+  margin-right: 30px;
+  max-width: 270px;
+  width: 100%;
+  & .footer__social-link {
+    a {
+      margin-bottom: 30px;
+    }
+  }
+}
+.profile__content {
+  width: 100%;
+}
+.profile__status {
+  font-size: 13px;
+  padding: 6px 9px 5px 30px;
+  border: 1px solid #d6d6d6;
+  color: #707070;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    left: 11px;
+    top: 13px;
+  }
+}
+.profile__on {
+  &::before {
+    background-color: $green;
+  }
+}
+.profile__off {
+  &::before {
+    background-color: $red;
+  }
+}
+.profile__aside-message,
+.profile__aside-following {
+  display: block;
+  font-size: 16px;
+  line-height: 30px;
+  color: #fff;
+  @include f500;
+  padding: 12px 5px;
+  text-align: center;
+  box-shadow: 0px 1px 2px 0px rgba(69, 90, 100, 0.75);
+  width: 269px;
+  margin-bottom: 17px;
+}
+.profile__aside-message {
+  background-color: rgb(84, 110, 122);
+  position: relative;
+  &::before {
+    content: "\f003";
+    font-family: "icomoon";
+    position: absolute;
+    left: 60px;
+    top: 11px;
+    font-size: 16px;
+  }
+}
+.profile__aside-following {
+  background-color: $green;
+  @include f700;
+}
+.profile__aside-link {
+  margin-bottom: 30px;
+}
+.profile__banner {
+  padding: 20px;
+  border: 1px solid #dedede;
+  background-color: #fff;
+  margin-bottom: 24px;
+  &-images {
+    background-image: url(../images/content/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 332px;
+  }
+}
+.profile__items {
+  display: flex;
+  border: 1px solid #dedede;
+}
+.profile__item {
+  width: 25%;
+  text-align: center;
+  background-color: #fff;
+  padding: 20px 5px 17px;
+  @include f500;
+  & + .profile__item {
+    border-left: 1px solid #dedede;
+  }
+  &-title {
+    color: $darkblue;
+    font-size: 14px;
+  }
+  &-content {
+    font-size: 14px;
+    color: #707070;
+    &.profile__item-sales {
+      color: $darkblue;
+    }
+  }
+}
+.profile-settings {
+  .product-one__tabs.settings__tabs {
+    .tabs span {
+      font-family: "Roboto", sans-serif !important;
+      position: relative;
+      &::before {
+        font-family: "icomoon";
+        position: absolute;
+        left: 24px;
+        color: #d0d0d0;
+        font-size: 14px;
+      }
+    }
+  }
+}
+.personal__box {
+  background-color: #fff;
+  border: 1px solid #dedede;
+  padding: 35px 40px 25px;
+  &-title {
+    margin-bottom: 25px;
+    @include f700;
+    color: $darkblue;
+    font-size: 20px;
+  }
+  &-text {
+    margin-bottom: 20px;
+    p {
+      color: #707070;
+    }
+  }
+}
+.personal__box-item__head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.personal__box-item__name {
+  @include f500;
+  font-size: 16px;
+  font-style: italic;
+  color: $darkblue;
+}
+.personal__box-item__number {
+  @include f700;
+  font-size: 16px;
+  color: $darkblue;
+}
+.personal__box-item__line {
+  background-color: #f4f4f4;
+  height: 15px;
+  border-radius: 3px;
+  margin-bottom: 23px;
+  span {
+    display: block;
+    border-radius: 3px;
+    height: 15px;
+    background-image: url(../images/progress.jpg);
+  }
+}
+
+// end profile
+// start upload
+
+.upload__inner {
+  background-color: #fff;
+  border: 1px solid #d7d7d7;
+  margin-bottom: 110px;
+  &-title {
+    @include f500;
+    font-size: 24px;
+    padding: 16px 35px 18px;
+    color: $darkblue;
+    border-bottom: 1px solid #d7d7d7;
+    margin-bottom: 40px;
+  }
+  &-content {
+    margin-bottom: 30px;
+    padding-left: 45px;
+    padding-right: 50px;
+  }
+}
+.upload-line {
+  display: flex;
+  margin-bottom: 25px;
+  label {
+    padding-top: 5px;
+    min-width: 175px;
+    padding-right: 15px;
+    color: #444;
+    span {
+      color: $green;
+      font-size: 24px;
+    }
+    &::placeholder {
+      color: #707070;
+    }
+  }
+  select,
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+    background-color: #f9f9f9;
+    height: 40px;
+    border: 1px solid #d7d7d7;
+    padding: 0 18px;
+    outline: none;
+  }
+  input[type="file"] {
+    outline: none;
+  }
+  textarea {
+    resize: none;
+    height: 150px;
+    padding: 8px 18px;
+  }
+  .jq-selectbox {
+    width: 100%;
+  }
+  .jq-selectbox__select {
+    height: 40px;
+    padding: 0 18px;
+    border: 1px solid #d7d7d7;
+    border-radius: 0px;
+    background: #f9f9f9;
+    box-shadow: none;
+    font-family: "Roboto", sans-serif;
+    line-height: 40px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #707070;
+    text-shadow: none;
+  }
+  .jq-selectbox__select-text {
+    font-family: "Roboto", sans-serif;
+    line-height: 40px;
+    font-size: 15px;
+    font-weight: 300;
+    color: #707070;
+  }
+  .jq-selectbox__trigger-arrow {
+    border: none;
+    font-size: 15px;
+    line-height: 40px;
+    right: 20px;
+    top: 0;
+    &::before {
+      content: "\f0d7";
+      font-family: "icomoon";
+    }
+  }
+  .jq-selectbox__trigger {
+    border-left: none;
+  }
+  .jq-file {
+    box-shadow: none;
+    width: 100%;
+    border-radius: 0px;
+    background-color: #f9f9f9;
+    height: 40px;
+    border: 1px solid #d7d7d7;
+    padding: 0 18px;
+  }
+  .jq-file__name {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+    color: #707070;
+    padding: 0;
+    border: none;
+    border-radius: 4px;
+    background: transparent;
+    box-shadow: none;
+    margin-left: 112px;
+    outline: none;
+  }
+  .jq-file__browse {
+    top: 5px;
+    left: 9px;
+    right: auto;
+    padding: 0 12px;
+    border: 1px solid #d7d7d7;
+    font-size: 14px;
+    color: #444;
+    line-height: 26px;
+    border-radius: 0;
+    background: #fff;
+    box-shadow: none;
+    text-shadow: none;
+  }
+}
+button {
+  color: #fff;
+  background-color: $green;
+  border: none;
+  padding: 15px 36px;
+  margin-left: 174px;
+  @include f500;
+  cursor: pointer;
+}
+// end upload
